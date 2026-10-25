@@ -247,3 +247,7 @@
 - [2026-10-06 USER] Gate B on device: builds and slices; rotate UX redone (C6).
 - [2026-10-03 USER] Phase 1 accepted: 483,772-triangle STL sliced on device.
 - [2026-10-02 USER] Phase 0/2 accepted: native Metal viewer, engine slicing.
+
+- [2026-10-25 DEVICE] Combined development build includes profile PR #2 and
+  the independent visible-Slice PR #3; matching source is pushed to the fork
+  on build/qidi-plus5-visible-slice.
