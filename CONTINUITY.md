@@ -251,3 +251,8 @@
 - [2026-10-25 DEVICE] Combined development build includes profile PR #2 and
   the independent visible-Slice PR #3; matching source is pushed to the fork
   on build/qidi-plus5-visible-slice.
+
+- [2026-10-25 DEVICE] ATS upload fix for Tailscale MagicDNS: add an insecure
+  HTTP exception for ts.net including subdomains. Existing private/CGNAT IP
+  exceptions do not cover fully qualified DNS names, and WebKit's exception
+  does not apply to URLSession upload requests. No global HTTP opt-out.

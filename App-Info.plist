@@ -138,7 +138,8 @@
 	<!-- Printers on the LAN (Moonraker/Klipper, OctoPrint) speak plain HTTP.
 	     iOS 17+ ATS blocks IP-address hosts unless listed: allow the private,
 	     link-local and CGNAT/Tailscale ranges, unqualified and .local names
-	     (NSAllowsLocalNetworking), and any printer page inside the Device
+	     (NSAllowsLocalNetworking), Tailscale MagicDNS .ts.net hostnames,
+	     and any printer page inside the Device
 	     tab web view (desktop PrinterWebView loads whatever the user set). -->
 	<key>NSAppTransportSecurity</key>
 	<dict>
@@ -148,6 +149,13 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>ts.net</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>10.0.0.0/8</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>

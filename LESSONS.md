@@ -406,3 +406,8 @@ in ~/xtool-cheatsheet.md — link, don't duplicate.)
   both lists and the selected filament-slot snapshot after selection and
   startup restoration; a filtered list must not reuse flags from the old
   printer, even when the available preset names are unchanged.
+
+### ATS and Tailscale hostnames (2026-10-25)
+- ATS exceptions for IP/CIDR addresses do not apply to fully qualified hostnames
+  that resolve to those addresses. NSAllowsArbitraryLoadsInWebContent only
+  covers WebKit. URLSession needs a domain exception for HTTP MagicDNS names.
